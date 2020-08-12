@@ -1,1 +1,11 @@
 {% extends 'base.html' %}
+{% block title %} adding {{media}} {% endblock %}
+{% block content %}
+<form method="post">
+  <label for="title">Title</label>
+  <input type="text" name="title"><br>
+  <label for="isSeries">Is it in a Series?</label>
+  <input type="checkbox" name="isSeries"><br>
+  <input type="submit">
+</form>
+{% endblock %}

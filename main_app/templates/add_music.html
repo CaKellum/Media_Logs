@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} adding {{media}} {% endblock %}
+{% block content %}
+<form method="post">
+  <label for="album">Title</label>
+  <input type="text" name="album"><br>
+  <label for="artist">Artist</label>
+  <input type="text" name="artist"><br>
+  <input type="submit">
+</form>
+{% endblock %}
