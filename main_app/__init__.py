@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 from . import (
-    db
+    db,list,auth
 )
 
 
@@ -28,9 +28,12 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route('/login')
+    @app.route('/hello')
     def login():
         return 'Hello, World!'
 
+    app.register_blueprint(auth.bp)
+    app.register_blueprint(list.bp)
+    app.add_url_rule('/', endpoint='index')
     db.init_app(app)
     return app

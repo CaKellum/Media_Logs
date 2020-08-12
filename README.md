@@ -1,2 +1,3 @@
 # Media_Logs
-the operational bits and bare bone structure of a flask web app
+this is heavily ripped from the flask tutorial
+modified in a few key ways to suit my purposes
